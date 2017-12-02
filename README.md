@@ -1,2 +1,2 @@
-# alex040603.github.io
-Alex's Personal Webite
+# Alex's Personal Webite
+url: https://alex040603.github.io
