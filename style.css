@@ -1,3 +1,27 @@
 body{
-    background-image: url("images/backgroundblue.jpg");
+    background-image: url("images/realwallpaper.jpg");
+    background-size:cover;
+}
+a{
+    border-style: solid;
+    border-color: rgb(122, 253, 0);
+    text-decoration: none;
+}
+a:visited {
+    color:rgb(28, 0, 184);
+}
+a:link {
+    color:rgb(88, 185, 151);
+}
+a:hover {
+    color:red;
+}
+a:active {
+    color:rgb(111, 11, 124);
+}
+nav {
+    font-size: 2em;
+}
+#homepagetitle{
+    text-align: center;
 }
