@@ -1,6 +1,6 @@
 body{
     background-image: url("images/realwallpaper.jpg");
-    background-size:cover;
+    background-size:contains;
 }
 a{
     border-style: solid;
