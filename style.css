@@ -2,26 +2,37 @@ body{
     background-image: url("images/realwallpaper.jpg");
     background-size:contains;
 }
-a{
+.boxedit{
     border-style: solid;
-    border-color: rgb(122, 253, 0);
+    border-color: rgb(118, 255, 212);
     text-decoration: none;
+    background-color: rgb(118, 255, 212);
 }
-a:visited {
-    color:rgb(28, 0, 184);
+.boxedit:visited {
+    color:rgb(0, 163, 133);
+
 }
-a:link {
-    color:rgb(88, 185, 151);
+.boxedit:link {
+    color:rgb(10, 78, 63);
 }
-a:hover {
-    color:red;
+.boxedit:hover {
+    color:#107050;
 }
-a:active {
-    color:rgb(111, 11, 124);
+.boxedit:active {
+    color:rgb(65, 221, 187);
 }
 nav {
     font-size: 2em;
 }
 #homepagetitle{
     text-align: center;
+}
+#instaphoto {
+    height: 100px;
+}
+#fontbigI {
+    font-size: 1.5em;
+}
+.bigfontII {
+    font-size: 1.5em;
 }
