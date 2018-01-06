@@ -7,6 +7,7 @@ body{
     border-color: rgb(118, 255, 212);
     text-decoration: none;
     background-color: rgb(118, 255, 212);
+    padding: 3px 4px 3px 4px
 }
 .boxedit:visited {
     color:rgb(0, 163, 133);
@@ -35,4 +36,7 @@ nav {
 }
 .bigfontII {
     font-size: 1.5em;
+}
+.paddingspace {
+    padding: 3px 33px 3px 33px;
 }
