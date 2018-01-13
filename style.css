@@ -40,3 +40,12 @@ nav {
 .paddingspace {
     padding: 3px 33px 3px 33px;
 }
+.center {
+    text-align: center;
+}
+.movebelow {
+    margin-bottom: 50px;
+}
+#canvas {
+    margin-top: 2em;
+}
