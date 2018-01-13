@@ -52,3 +52,6 @@ nav {
 main {
     margin-top: 40px;
 }
+canvas {
+    background-color: white;
+}
