@@ -8,4 +8,5 @@ function init() {
 
 function bluering() {
     ctx.fillstyle = "blue"
+    ctx.arc(150, 100, 50, 0, 2 * math.PI)
 }
