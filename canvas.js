@@ -28,13 +28,44 @@ function init() {
     ctx.fillRect(150,140,10,20);
     ctx.fillRect(140,150,10,30);
     ctx.fillRect(130,170,20,10);
-    ctx.fillStyle="blue"
-    // Second To-Last Outline
-    ctx.fillRect
-
-
-
     ctx.fillStyle="red"
+    // Second To-Last Outline
+    // Top Part
+    ctx.fillRect(10,90,10,50);
+    ctx.fillRect(20,70,10,70);
+    ctx.fillRect(30,60,10,70);
+    ctx.fillRect(40,50,10,80);
+    ctx.fillRect(50,50,10,80);
+    ctx.fillRect(40,40,90,10);
+    //Second part
+    ctx.fillRect(80,40,10,90);
+    ctx.fillRect(70,40,10,90);
+    ctx.fillRect(60,40,10,90);
+    ctx.fillRect(90,40,10,90);
+    ctx.fillRect(100,40,10,90);
+    ctx.fillRect(110,40,10,90);
+    ctx.fillRect(120,40,10,90);
+    ctx.fillRect(130,60,10,70);
+    ctx.fillRect(130,70,10,60);
+    ctx.fillRect(140,70,10,70);
+    ctx.fillRect(150,90,10,50);
+    ctx.fillStyle="#2C2B2C"; 
+    ctx.fillRect(30,130,110,10);
+    ctx.fillRect(20,140,20,10);
+    ctx.fillRect(130,140,20,10);
+    //eyes
+    ctx.fillStyle="#2C2B2C";
+    ctx.fillRect(60,150,20,10);
+    ctx.fillRect(90,150,20,10);
+    //white spots
+    ctx.fillStyle"white";
+    ctx
+
+    
+
+    
+
+
     
 
    
