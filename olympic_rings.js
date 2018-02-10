@@ -5,58 +5,26 @@ function init() {
     canvas = document.getElementById("my-canvas");
     ctx = canvas.getContext('2d');
     blueringtop();
-    yellowring();
-    bluering();
-    blackring();
-    redring();
-    greenring();
-}
-
-function bluering() {
-    ctx.beginPath();
-    ctx.strokeStyle = "blue";
-    ctx.arc(100, 100, 70, 0, Math.PI);
-    ctx.lineWidth = 7;
-    ctx.stroke();
-}
-
-
-function yellowring() {
-    ctx.beginPath();
-    ctx.strokeStyle = "yellow";
-    ctx.arc(190, 170, 70, 0, 2 * Math.PI);
-    ctx.lineWidth = 7;
-    ctx.stroke();
+    // yellowring();
+    blueringbottom();
 }
 
 function blueringtop() {
     ctx.beginPath();
     ctx.strokeStyle = "blue";
-    ctx.arc(100, 100, 70, Math.PI, 2 * Math.PI);
+    ctx.arc(100, 100, 70, 5 * Math.PI/4, Math.PI/4);
     ctx.lineWidth = 7;
     ctx.stroke();
 }
 
-function blackring() {
+function blueringbottom() {
     ctx.beginPath();
-    ctx.strokeStyle = "black";
-    ctx.arc(280, 100, 70, 0, 2 * Math.PI);
+    ctx.strokeStyle = "blue";
+    ctx.arc(100, 100, 70, Math.PI/4, 5 * Math.PI/4);
     ctx.lineWidth = 7;
     ctx.stroke();
 }
 
-function redring() {
-    ctx.beginPath();
-    ctx.strokeStyle = "red";
-    ctx.arc(460, 100, 70, 0, 2 * Math.PI);
-    ctx.lineWidth = 7;
-    ctx.stroke();
-}
 
-function greenring() {
-    ctx.beginPath();
-    ctx.strokeStyle = "lime";
-    ctx.arc(370, 170, 70, 0, 2 * Math.PI);
-    ctx.lineWidth = 7;
-    ctx.stroke();
-}
+
+
