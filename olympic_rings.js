@@ -4,9 +4,9 @@ window.onload = init;
 function init() {
     canvas = document.getElementById("my-canvas");
     ctx = canvas.getContext('2d');
-    bluering();
     blueringtop();
     yellowring();
+    bluering();
     blackring();
     redring();
     greenring();
