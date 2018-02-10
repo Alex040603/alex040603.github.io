@@ -8,7 +8,8 @@ function init() {
     blueringtop();
     yellowring();
     blackring();
-    redwing();
+    redring();
+    greenring();
 }
 
 function bluering() {
@@ -47,7 +48,15 @@ function blackring() {
 function redring() {
     ctx.beginPath();
     ctx.strokeStyle = "red";
-    ctx.arc(200, 100, 70, 0, 2 * Math.PI);
+    ctx.arc(460, 100, 70, 0, 2 * Math.PI);
+    ctx.lineWidth = 7;
+    ctx.stroke();
+}
+
+function greenring() {
+    ctx.beginPath();
+    ctx.strokeStyle = "lime";
+    ctx.arc(370, 170, 70, 0, 2 * Math.PI);
     ctx.lineWidth = 7;
     ctx.stroke();
 }
