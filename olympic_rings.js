@@ -9,18 +9,19 @@ function init() {
 }
 
 function bluering() {
-    ctx.save;
+    ctx.beginPath();
     ctx.strokeStyle = "blue";
-    ctx.arc(100, 100, 70, 0, 2 * Math.PI);
+    ctx.arc(100, 100, 70, 0, 1 * Math.PI);
     ctx.lineWidth = 7;
     ctx.stroke();
-    ctx.restore;
 }
+
 
 function yellowring() {
-    ctx.save();
+    ctx.beginPath();
     ctx.strokeStyle = "yellow";
-    
-
-
+    ctx.arc(200, 100, 70, 0, 2 * Math.PI);
+    ctx.lineWidth = 7;
+    ctx.stroke();
 }
+

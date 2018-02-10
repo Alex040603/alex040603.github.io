@@ -58,7 +58,13 @@ function init() {
     ctx.fillRect(60, 150, 20, 10);
     ctx.fillRect(90, 150, 20, 10);
     //white spots
-   
+    ctx.fillStyle = "white";
+    ctx.fillRect(30, 60, 30, 20);
+    ctx.fillRect(50, 40, 20, 15);
+    ctx.fillRect(100, 50, 20, 15);
+    ctx.fillRect(70, 90, 20, 15);
+    ctx.fillRect(120, 110, 20, 15);
+    ctx.fillRect(30, 100, 20, 15);
 
 
 
