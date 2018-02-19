@@ -8,7 +8,7 @@ function init() {
     blueyellowringtworight();
     yelllowpartfour();
     blackringleftyellowthree();
-    greenring();
+    greenringleft();
 }
 
 function blueyellowringleft() {
@@ -60,12 +60,30 @@ function blackringleftyellowthree() {
      ctx.lineWidth = 7;
      ctx.stroke(); 
 }
-
-function greenring () {
+//GREEN RING PARTS
+function greenringleft () {
     ctx.beginPath();
     ctx.strokeStyle = "green";
     ctx.arc(320, 190, 70, Math.PI/4, 5 * Math.PI/4);
     ctx.lineWidth = 7;
     ctx.stroke();
+    // green ring. Cut 2
+    ctx.beginPath();
+    ctx.strokeStyle = "green";
+    ctx.arc(320, 190, 70, 5 * Math.PI/4,3*Math.PI/2);
+    ctx.lineWidth = 7;
+    ctx.stroke();
+    // green ring. Cut 3
+    ctx.beginPath();
+     ctx.strokeStyle = "green";
+     ctx.arc(320, 190, 70, 3*Math.PI/2, 7*Math.PI/4);
+     ctx.lineWidth = 7;
+     ctx.stroke(); 
+     // green ring. Cut 4
+     ctx.beginPath();
+     ctx.strokeStyle = "green";
+     ctx.arc(320, 190, 70, 7*Math.PI/4, Math.PI/4);
+     ctx.lineWidth = 7;
+     ctx.stroke();
 }
 
