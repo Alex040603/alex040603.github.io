@@ -5,10 +5,12 @@ function init() {
     canvas = document.getElementById("my-canvas");
     ctx = canvas.getContext('2d');
     blueyellowringleft(); 
-    blueyellowringtworight();
+    blueyellowringright();
     yelllowpartfour();
     blackringleftyellowthree();
     greenringleft();
+    blackringright();
+    redringleft();
 }
 
 function blueyellowringleft() {
@@ -25,7 +27,7 @@ function blueyellowringleft() {
     ctx.stroke();
 }
 
-function blueyellowringtworight() {
+function blueyellowringright() {
     ctx.beginPath();
     ctx.strokeStyle = "yellow";
     ctx.arc(160, 190, 70, 5 * Math.PI/4,3*Math.PI/2);
@@ -86,4 +88,18 @@ function greenringleft () {
      ctx.lineWidth = 7;
      ctx.stroke();
 }
+function blackringright() {
+    ctx.beginPath();
+    ctx.strokeStyle = "black";
+    ctx.arc(240, 90, 70, 5 * Math.PI/4, Math.PI/4);
+    ctx.lineWidth = 7;
+    ctx.stroke();
+}
 
+function redringleft() {
+    ctx.beginPath();
+    ctx.strokeStyle = "red";
+    ctx.arc(400, 90, 70, 3*Math.PI/4, 7 * Math.PI/4);
+    ctx.lineWidth = 7;
+    ctx.stroke(); 
+}
