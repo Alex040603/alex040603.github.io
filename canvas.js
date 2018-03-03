@@ -65,27 +65,4 @@ function init() {
     ctx.fillRect(70, 90, 20, 15);
     ctx.fillRect(120, 110, 20, 15);
     ctx.fillRect(30, 100, 20, 15);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
