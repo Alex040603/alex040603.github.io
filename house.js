@@ -18,8 +18,8 @@ function toptriangle() {
     ctx.fillStyle = "#545B63";
     ctx.lineWidth = 5;
     ctx.moveTo(441, 78);
-    ctx.lineTo(551, 188);
-    ctx.lineTo(334, 188);
+    ctx.lineTo(551, 181);
+    ctx.lineTo(334, 181);
     ctx.fill();
 }
 
