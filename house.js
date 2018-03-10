@@ -14,6 +14,9 @@ function init() {
     drawNavyBar(415,143);
     drawNavyBar(415,150);
     drawNavyBar(415,157);
+    drawGreyBox(293,225);
+    drawGreyBox(480,225);
+    door();
 }
 function toprectangle() {
     //top navy-blue rectangle
@@ -52,10 +55,17 @@ function bigHousePart() {
     ctx.fillRect(282, 193, 315, 218);
 }
 function drawNavyBar(x,y) {
-    ctx.fillStyle = "#38394A"
-    ctx.fillRect(x,y,55,4)
+    ctx.fillStyle = "#38394A";
+    ctx.fillRect(x,y,55,4);
 }
-
+function drawGreyBox(x,y) {
+    ctx.fillStyle = "#A3A7A8";
+    ctx.fillRect(x,y,105,75);
+}
+function door() {
+    ctx.fillStyle = "#94857C";
+    ctx.fillRect(408,220,64,120)
+}
 
 
 
