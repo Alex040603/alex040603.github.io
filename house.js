@@ -6,6 +6,7 @@ function init() {
     ctx = canvas.getContext('2d');
     toprectangle();
     toptriangle();
+    topinsidetriangle();
 }
 function toprectangle() {
     //top navy-blue rectangle
@@ -23,3 +24,13 @@ function toptriangle() {
     ctx.fill();
 }
 
+function topinsidetriangle() {
+    //triangle inside top grey triangle
+    ctx.beginPath();
+    ctx.fillStyle = "#CBCBCB";
+    ctx.lineWidth = 5;
+    ctx.moveTo(441, 78);
+    ctx.lineTo(551, 175);
+    ctx.lineTo(334, 175);
+    ctx.fill();
+}
