@@ -7,6 +7,8 @@ function init() {
     toprectangle();
     toptriangle();
     topinsidetriangle();
+    drawBox(5,10);
+    drawBox(0,0);
 }
 function toprectangle() {
     //top navy-blue rectangle
@@ -18,7 +20,7 @@ function toptriangle() {
     ctx.beginPath();
     ctx.fillStyle = "#545B63";
     ctx.lineWidth = 5;
-    ctx.moveTo(441, 78);
+    ctx.moveTo(441, 88);
     ctx.lineTo(551, 181);
     ctx.lineTo(334, 181);
     ctx.fill();
@@ -29,8 +31,12 @@ function topinsidetriangle() {
     ctx.beginPath();
     ctx.fillStyle = "#CBCBCB";
     ctx.lineWidth = 5;
-    ctx.moveTo(441, 78);
-    ctx.lineTo(551, 175);
-    ctx.lineTo(334, 175);
+    ctx.moveTo(441, 93);
+    ctx.lineTo(551, 173);
+    ctx.lineTo(334, 173);
     ctx.fill();
+}
+function drawBox (x,y) {
+    ctx.fillRect(x,y,10,10);
+
 }
