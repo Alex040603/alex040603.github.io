@@ -8,8 +8,12 @@ function init() {
     topTriangle();
     topinsidetriangle();
     greyBarOne();
-    // drawBox(5,10);
-    // drawBox(0,0);
+    whiteBarOne();
+    bigHousePart();
+    drawNavyBar(415,136);
+    drawNavyBar(415,143);
+    drawNavyBar(415,150);
+    drawNavyBar(415,157);
 }
 function toprectangle() {
     //top navy-blue rectangle
@@ -40,14 +44,18 @@ function greyBarOne() {
     ctx.fillRect(270, 181, 340, 4);
 }
 function whiteBarOne() {
-    
-
+    ctx.fillStyle = "#A9A9A9";
+    ctx.fillRect(275, 185, 330, 8);
+}
+function bigHousePart() {
+    ctx.fillStyle = "#DADADA";
+    ctx.fillRect(282, 193, 315, 218);
+}
+function drawNavyBar(x,y) {
+    ctx.fillStyle = "#38394A"
+    ctx.fillRect(x,y,55,4)
 }
 
 
 
 
-//function drawBox (x,y) {
-   // ctx.fillRect(x,y,10,10);
-
-//}
