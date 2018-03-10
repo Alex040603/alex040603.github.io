@@ -38,6 +38,9 @@ function topinsidetriangle() {
 function greyBarOne() {
     ctx.fillStyle = "#545B63";
     ctx.fillRect(270, 181, 340, 4);
+}
+function whiteBarOne() {
+    
 
 }
 
