@@ -17,6 +17,7 @@ function init() {
     drawGreyBox(293,225);
     drawGreyBox(480,225);
     door();
+    doorHandle();
 }
 function toprectangle() {
     //top navy-blue rectangle
@@ -65,6 +66,10 @@ function drawGreyBox(x,y) {
 function door() {
     ctx.fillStyle = "#94857C";
     ctx.fillRect(408,220,64,120)
+}
+function doorHandle() {
+    ctx.fillStyle = "yellow";
+    ctx.fillRect
 }
 
 
