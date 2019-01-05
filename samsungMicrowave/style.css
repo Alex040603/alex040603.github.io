@@ -1,4 +1,13 @@
-body{
-    background-image: url("PrettySnowBackground.jpeg");
-    background-size: contains;
+header {
+    display: flex;
+    justify-content: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#big_text{
+    font-size: 3em;
 }
