@@ -17,28 +17,41 @@
         <canvas id="animation-canvas" width="1000" height="700"></canvas>
     </section>
     <script src="../drawing/ruler.js"></script>
-    <script src="drawing/pacman.js"></script>
+    <script src="../drawing/pacman.js"></script>
+    <script src="../drawing/ghost.js"></script>
     <script> 
         var canvas;
         var ctx;
         const UNIT = 30;
         var requestId;
+        var positionX = 0;
         window.onload = init;
         function init() {
             canvas = document.getElementById("animation-canvas");
             ctx = canvas.getContext("2d");
 
-            //drawPacman();
-            //drawPacman2();
-            //drawPacman3();
-            startanimation();
+            // drawPacman1();
+            // drawPacman2();
+            // drawPacman3();
+             drawGhostOrange();
+            // drawGhostBlue();
+            // drawGhostPink();
+            // drawGhostRed();
+            //startAnimation();
             drawRuler(1);
         }
-        function startanimation() {
-            requestId=requestAnimationFrame(animationLoop);
+        function startAnimation() {
+            requestId = requestAnimationFrame(animationLoop);
         }
-        function animationLoop(){
-            (timeStamp)
+        function animationLoop(timeStamp) {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillRect(positionX, 0, 50, 50);
+            drawPacman1();
+            changePositionX();
+            requestId = requestAnimationFrame(animationLoop);
+        }
+        function changePositionX(){
+            positionX += 3;
         }
     </script>
 </body>
