@@ -25,6 +25,7 @@
         const UNIT = 30;
         var requestId;
         var positionX = 0;
+        var positionY = 0;
         window.onload = init;
         function init() {
             canvas = document.getElementById("animation-canvas");
@@ -33,11 +34,11 @@
             // drawPacman1();
             // drawPacman2();
             // drawPacman3();
-             drawGhostOrange();
+            // drawGhostOrange();
             // drawGhostBlue();
             // drawGhostPink();
             // drawGhostRed();
-            //startAnimation();
+            startAnimation();
             drawRuler(1);
         }
         function startAnimation() {
@@ -45,13 +46,27 @@
         }
         function animationLoop(timeStamp) {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.fillRect(positionX, 0, 50, 50);
-            drawPacman1();
+            ctx.fillRect(positionX, positionY, 50, 50);
+            //drawPacman1();
             changePositionX();
+            changePositionY();
             requestId = requestAnimationFrame(animationLoop);
         }
-        function changePositionX(){
-            positionX += 3;
+        function changePositionX() {
+            positionX += 1;
+            if (positionX > 1000) {
+                positionX = -50
+            } else {
+                positionX += 1
+            }
+        }
+        function changePositionY() {
+            positionY += 0.37;
+            if (positionX == -50) {
+                positionY = -50
+            } else {
+                positionY += 1
+            }
         }
     </script>
 </body>

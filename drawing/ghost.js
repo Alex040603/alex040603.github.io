@@ -10,4 +10,5 @@ function drawGhostOrange() {
     ctx.fillRect(11 * UNIT, 4 * UNIT, 2 * UNIT, 1 * UNIT )
     ctx.fillRect(4 * UNIT, 5 * UNIT, 4 * UNIT, 1 * UNIT)
     ctx.fillRect(10 * UNIT, 5 * UNIT, 4 * UNIT, 1 * UNIT)
+    //ctx.fillRect()
 }
