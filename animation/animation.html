@@ -34,11 +34,8 @@
             // drawPacman1();
             // drawPacman2();
             // drawPacman3();
-             drawGhostOrange();
-            // drawGhostBlue();
-            // drawGhostPink();
-            // drawGhostRed();
-            startAnimation();
+             drawGhost(4,6);
+            //startAnimation();
             drawRuler(1);
         }
         function startAnimation() {
@@ -48,7 +45,7 @@
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             ctx.fillRect(positionX, positionY, 50, 50);
             //drawPacman1();
-            drawGhostOrange();
+            drawGhost();
             // changePositionX();
             // changePositionY();
             //changePosition();
