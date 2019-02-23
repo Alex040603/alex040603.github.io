@@ -34,7 +34,7 @@
             // drawPacman1();
             // drawPacman2();
             // drawPacman3();
-            // drawGhostOrange();
+             drawGhostOrange();
             // drawGhostBlue();
             // drawGhostPink();
             // drawGhostRed();
@@ -48,26 +48,19 @@
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             ctx.fillRect(positionX, positionY, 50, 50);
             //drawPacman1();
-            changePositionX();
-            changePositionY();
+            drawGhostOrange();
+            // changePositionX();
+            // changePositionY();
+            //changePosition();
             requestId = requestAnimationFrame(animationLoop);
         }
-        function changePositionX() {
-            positionX += 1;
-            if (positionX > 1000) {
-                positionX = -50
-            } else {
-                positionX += 1
+
+        function changePositionPacman() {
+            if ((positionX < 950) && (positionY == 0)) {
+                positionX += 5;
             }
-        }
-        function changePositionY() {
-            positionY += 0.37;
-            if (positionX == -50) {
-                positionY = -50
-            } else {
-                positionY += 1
-            }
-        }
+}
+
     </script>
 </body>
 
