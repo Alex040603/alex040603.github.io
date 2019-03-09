@@ -2,6 +2,7 @@ var canvas;
 var ctx;
 const UNIT = 30;
 var requestId;
+var isRight = true
 var positionX = 0;
 var positionY = 350;
 window.onload = init;
@@ -23,10 +24,16 @@ function animationLoop(timeStamp) {
 }
 
 function moveBlock() {
-    if (positionY <= 700) {
+    if (isRight = true) {
         positionX += 5;
-    } else if {
-        (positionY == 750)
-        positionY = 0
+    } else if (positionX >= 1000) {
+        positionX -= 5;
+    }
+}
+function changeDirection() {
+    if (isRight = true) {
+        positionX += 5;
+    } else if (isRight = 8) {
+        
     }
 }

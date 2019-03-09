@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Drawing</h1>
+    </header>
+    <nav>
+        <a class="boxedit" href="../index.html">Hompage</a>
+    </nav>
+    <section>
+        <canvas id="animation-canvas" width="1000" height="700"></canvas>
+    </section>
+
+    <script src="ruler.js"></script>
+    <script src="drawGroundBlock.js"></script>
+    <script> 
+        var canvas;
+        var ctx;
+        const UNIT = 30;
+        var requestId;
+        var positionX = 0;
+        var positionY = 0;
+        window.onload = init;
+
+        function init() {
+            canvas = document.getElementById("animation-canvas");
+            ctx = canvas.getContext("2d");
+            drawGroundBlock();
+            drawRuler(1);
+        }
+    </script>
+</body>
+
+</html>
