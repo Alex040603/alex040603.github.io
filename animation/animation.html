@@ -25,17 +25,17 @@
         var ctx;
         const UNIT = 30;
         var requestId;
-        var positionX = 0
+        var positionX = 0;
         var positionY = 0;
         window.onload = init;
         function init() {
             canvas = document.getElementById("animation-canvas");
             ctx = canvas.getContext("2d");
 
-            // drawPacman1();
+            drawPacman1();
             // drawPacman2();
             // drawPacman3();
-             drawGhost(4,6);
+            drawGhost(4,6);
             //startAnimation();
             drawRuler(1);
         }

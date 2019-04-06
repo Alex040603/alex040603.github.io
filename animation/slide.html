@@ -10,12 +10,45 @@
     <header>
         <h1>Sliding</h1>
     </header>
-    <a class="boxedit" href="../index.html">Hompage</a>
+    <nav>
+        <a class="boxedit" href="../index.html">Hompage</a>
+    </nav>
     <section>
-            <canvas id="animation-canvas" width="1000" height="700"></canvas>
+        <canvas id="animation-canvas" width="1000" height="700"></canvas>
     </section>
-    <script src="slide.js">Slide</script>
-    
+    <script>
+        var canvas;
+        var ctx;
+        var requestId;
+        var positionX = 0;
+        const UNIT = 10;
+        window.onload = init;
+        function init() {
+            canvas = document.getElementById("animation-canvas");
+            ctx = canvas.getContext("2d");
+            startAnimation();
+        }
+        function startAnimation(){
+            requestId = requestAnimationFrame(animationLoop);
+        }
+        function animationLoop(timeStamp){
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            drawBackground();
+            animatePacman();
+            drawGroundBlocks();
+            requestId = requestAnimationFrame(animationLoop);
+        }
+        function drawBackground(){
+            ctx.fillStyle = "SkyBlue";
+            ctx.fillRect(0,0,canvas.width, canvas.height);
+            drawGroundBlocks(0, 55, 7);
+        }
+        function animatePacman(){
+            drawPacman1(0,10);
+        }
+    </script>
+    <script src="../drawing/pacman.js"> </script>
+    <script src="../drawing/drawGroundBlock.js"></script>
 </body>
 
 </html>

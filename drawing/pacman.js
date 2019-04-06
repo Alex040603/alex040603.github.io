@@ -1,4 +1,4 @@
-function drawPacman1() {
+function drawPacman1(x,y) {
     ctx.fillStyle = "rgb(251,255,0)";
     //the top half (until the inner most part of the mouth)
     ctx.fillRect(4 * UNIT, 0 * UNIT, 5 * UNIT, 1 * UNIT);
