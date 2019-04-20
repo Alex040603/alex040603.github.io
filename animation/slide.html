@@ -21,6 +21,7 @@
         var ctx;
         var requestId;
         var positionX = 0;
+        var isFacingRight = true;
         const UNIT = 10;
         window.onload = init;
         function init() {
@@ -28,24 +29,47 @@
             ctx = canvas.getContext("2d");
             startAnimation();
         }
-        function startAnimation(){
+        function startAnimation() {
             requestId = requestAnimationFrame(animationLoop);
         }
-        function animationLoop(timeStamp){
+        function animationLoop(timeStamp) {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             drawBackground();
             animatePacman();
-            drawGroundBlocks();
+            changeIsFacingRight();
+            changePositionX();
             requestId = requestAnimationFrame(animationLoop);
         }
-        function drawBackground(){
+        function drawBackground() {
             ctx.fillStyle = "SkyBlue";
-            ctx.fillRect(0,0,canvas.width, canvas.height);
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
             drawGroundBlocks(0, 55, 7);
         }
-        function animatePacman(){
-            drawPacman1(0,42);
+        function animatePacman() {
+            if (isFacingRight == true) {
+                drawPacman1(positionX, 42);
+            } else if (isFacingRight == false) {
+                ctx.save
+                ctx.scale(-1,1)
+                drawPacman1(-positionX - 42)
+                ctx.restore()
+            }
         }
+        function changeIsFacingRight() {
+            if (positionX > canvas.width / UNIT + 2 * UNIT) {
+                isFacingRight = false;
+            } else if (positionX - 14*UNIT) {
+                isFacingRight = true;
+            }
+
+        }
+        function changePositionX() {
+            if (isFacingRight == true) {
+                positionX += 1;
+            } else if (isFacingRight == false) {
+                positionX -= 1;
+            }
+        }   
     </script>
     <script src="../drawing/pacman.js"> </script>
     <script src="../drawing/drawGroundBlock.js"></script>
