@@ -49,16 +49,16 @@
             if (isFacingRight == true) {
                 drawPacman1(positionX, 42);
             } else if (isFacingRight == false) {
-                ctx.save
-                ctx.scale(-1,1)
-                drawPacman1(-positionX - 42)
-                ctx.restore()
+                ctx.save();
+                ctx.scale(-1,1);
+                drawPacman1(-positionX, 42);
+                ctx.restore();
             }
         }
         function changeIsFacingRight() {
             if (positionX > canvas.width / UNIT + 2 * UNIT) {
                 isFacingRight = false;
-            } else if (positionX - 14*UNIT) {
+            } else if (positionX < - 12 ) {
                 isFacingRight = true;
             }
 

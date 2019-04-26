@@ -13,7 +13,8 @@
     <nav>
         <a class="boxedit" href="../index.html">Hompage</a>
         <a class="boxedit" href="slide.html">Slide</a>
-    </nav>
+        <a class="boxedit" href="walk.html">Walk</a>
+        </nav>
     <section>
         <canvas id="animation-canvas" width="1000" height="700"></canvas>
     </section>
@@ -32,10 +33,10 @@
             canvas = document.getElementById("animation-canvas");
             ctx = canvas.getContext("2d");
 
-            drawPacman1();
+            // drawPacman1();
             // drawPacman2();
             // drawPacman3();
-            drawGhost(4,6);
+            drawGhost();
             //startAnimation();
             drawRuler(1);
         }

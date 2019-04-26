@@ -1,8 +1,11 @@
-function drawGhost(x,y) {
+function drawGhost(x,y,color) {
     const RED_COLOR="#FF0000";
     const LAVANDER_COLOR="#FFB8FF"
     const AQUA_COLOR="#00FFFF"
     const ORANGE_COLOR="#FFB852"
+    if (color=="red") {
+
+    }
     ctx.save();
     ctx.translate(x * UNIT,y * UNIT);
     ctx.fillStyle = "#FFB852";//(orange)
@@ -38,8 +41,13 @@ function tentacles(){
     ctx.fillRect(12 * UNIT, 12 * UNIT, 2 * UNIT, 1 * UNIT);
     ctx.fillRect(13 * UNIT, 13 * UNIT, 1 * UNIT, 1 * UNIT);
 }
+// function tentacles_frame_two(){
+//     ctx.fillStyle = "#FFB852";//(oragne)
+//     ctx.fillRect(13 * UNIT, )
+// }
 function pupils(){
     ctx.fillStyle = "#3B60AD";//blue
     ctx.fillRect(5 * UNIT, 5 * UNIT, 2 * UNIT, 2 * UNIT);
     ctx.fillRect(11 * UNIT, 5 * UNIT, 2 * UNIT, 2 * UNIT);
 }
+//
