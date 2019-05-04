@@ -12,12 +12,74 @@
     </header>
     <nav>
         <a class="boxedit" href="../index.html">Hompage</a>
-        <a class="boxedit" href="walk.html">Walk</a>
+        <a class="boxedit" href="slide.html">Slide</a>
 
     </nav>
     <section>
         <canvas id="animation-canvas" width="1000" height="700"></canvas>
     </section>
-    <script src="../drawing/ruler.js"></script>
+    <script>
+        var canvas;
+        var ctx;
+        var requestId;
+        var time = 0;
+        var positionX = 0;
+        const MAX_TIME = 8;
+        const UNIT = 10
+        window.onload = init;
+        function init() {
+            canvas = document.getElementById("animation-canvas");
+            ctx = canvas.getContext("2d");
+            startAnimation();
+        }
+        function startAnimation() {
+            requestId = requestAnimationFrame(animationLoop);
+        }
+        function animationLoop(timeStamp) {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            drawBackground();
+            changeTime();
+            changePositionX();
+            animatePacman();
+            requestId = requestAnimationFrame(animationLoop);
+        }
+        function drawBackground() {
+            ctx.fillStyle = "lightblue";
+            ctx.fillRect(0 * UNIT, 0 * UNIT, canvas.width, canvas.height);
+            drawGroundBlocks(0, 55, 7);
+        }
+        function changeTime() {
+            if (time == MAX_TIME) {
+                time = 0
+            } else {
+                time += 1
+            }
+        }
+        function changePositionX() {
+            if (positionX >= canvas.width / UNIT) {
+                positionX = -13
+            } else {
+                positionX += 1
+            }
+        }
+        function animatePacman() {
+            if ((0 <= time) && (time < MAX_TIME / 2)) {
+                drawPacman1(positionX, 42);
+            } else if ((MAX_TIME / 3 <= time) && (time < MAX_TIME)) {
+                drawPacman2(positionX, 42);
+            }
+    }
+    function animateGhost() {
+            if ((0 <= time) && (time < MAX_TIME / 2)) {
+                drawGhost1(positionX, 42);
+            } else if ((MAX_TIME / 3 <= time) && (time < MAX_TIME)) {
+                drawPacman2(positionX, 42);
+            }
+    }
+    </script>
+    <script src="../drawing/drawGroundBlock.js"></script>
     <script src="../drawing/pacman.js"></script>
     <script src="../drawing/ghost.js"></script>
+</body>
+
+</html>
