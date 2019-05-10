@@ -13,6 +13,7 @@
     <nav>
         <a class="boxedit" href="../index.html">Hompage</a>
         <a class="boxedit" href="slide.html">Slide</a>
+        <a class="boxedit" href="jump.html">jump</a>
 
     </nav>
     <section>
@@ -71,9 +72,9 @@
     }
     function animateGhost() {
             if ((0 <= time) && (time < MAX_TIME / 2)) {
-                drawGhost1(positionX, 42);
+                drawGhost1(positionX, 42, lavander, f);
             } else if ((MAX_TIME / 3 <= time) && (time < MAX_TIME)) {
-                drawPacman2(positionX, 42);
+                drawGhost2(positionX, 42);
             }
     }
     </script>

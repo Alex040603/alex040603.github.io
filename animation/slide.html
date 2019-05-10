@@ -13,6 +13,7 @@
     <nav>
         <a class="boxedit" href="../index.html">Hompage</a>
         <a class="boxedit" href="walk.html">Walk</a>
+        <a class="boxedit" href="jump.html">Jump</a>
     </nav>
     <section>
         <canvas id="animation-canvas" width="1000" height="700"></canvas>
@@ -56,6 +57,7 @@
                 ctx.restore();
             }
         }
+        
         function changeIsFacingRight() {
             if (positionX > canvas.width / UNIT + 2 * UNIT) {
                 isFacingRight = false;
