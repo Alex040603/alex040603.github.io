@@ -22,8 +22,6 @@
         var canvas;
         var ctx;
         var requestId;
-        var positionX = 0;
-        //var 
         const UNIT = 10;
         window.onload = init;
         function init() {
@@ -36,13 +34,12 @@
         }
         function animationLoop(timeStamp) {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-            drawBackground();
-            animatePacman();
             requestId = requestAnimationFrame(animationLoop);
+            drawBackground();
         }
         function drawBackground() {
-            ctx.fillStyle = "SkyBlue";
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = "lightblue";
+            ctx.fillRect(0 * UNIT, 0 * UNIT, canvas.width, canvas.height);
             drawGroundBlocks(0, 55, 7);
         }
 

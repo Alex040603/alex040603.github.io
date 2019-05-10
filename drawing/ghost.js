@@ -4,7 +4,7 @@ function drawGhost(x, y, color, frame) {
     const LAVANDER_COLOR = "#FFB8FF";
     const AQUA_COLOR = "#00FFFF";
     const ORANGE_COLOR = "#FFB852";
-    var frames;
+    var frame;
     if (color == "red") {
         ghostColor = RED_COLOR;
     } else if (color == "lavander") {
