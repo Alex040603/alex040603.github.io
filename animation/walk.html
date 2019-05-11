@@ -13,7 +13,7 @@
     <nav>
         <a class="boxedit" href="../index.html">Hompage</a>
         <a class="boxedit" href="slide.html">Slide</a>
-        <a class="boxedit" href="jump.html">jump</a>
+        <a class="boxedit" href="jump.html">Jump</a>
 
     </nav>
     <section>
@@ -47,7 +47,7 @@
             requestId = requestAnimationFrame(animationLoop);
         }
         function drawBackground() {
-            ctx.fillStyle = "lightblue";
+            ctx.fillStyle = "black";
             ctx.fillRect(0 * UNIT, 0 * UNIT, canvas.width, canvas.height);
             drawGroundBlocks(0, 55, 7);
         }
@@ -62,7 +62,7 @@
             if (positionX >= canvas.width / UNIT) {
                 positionX = -13
             } else {
-                positionX += .5
+                positionX += 1
             }
         }
         function animatePacman() {
