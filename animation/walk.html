@@ -42,7 +42,7 @@
             changeTime();
             changePositionX();
             animateGhost();
-            //animatePacman();
+            animatePacman();
             
             requestId = requestAnimationFrame(animationLoop);
         }
@@ -68,14 +68,14 @@
         function animatePacman() {
             if ((0 <= time) && (time < MAX_TIME / 2)) {
                 drawPacman1(positionX, 42);
-            } else if ((MAX_TIME / 3 <= time) && (time < MAX_TIME)) {
+            } else if ((MAX_TIME / 3 <= time) || (time < MAX_TIME)) {
                 drawPacman2(positionX, 42);
             }
     }
     function animateGhost() {
             if ((0 <= time) && (time < MAX_TIME / 2)) {
                 drawGhost(positionX, 41, "lavander", 1);
-            } else if ((MAX_TIME / 2 <= time) && (time < MAX_TIME)) {
+            } else if ((MAX_TIME / 2 <= time) || (time < MAX_TIME)) {
                 drawGhost(positionX, 41, "lavander", 2);
             }
     }

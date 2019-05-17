@@ -24,8 +24,13 @@
         var requestId;
         var time = 0;
         var positionX = 0;
+        var positionY = 41;
         const MAX_TIME = 30;
         const UNIT = 10
+        const ACCELERATION = 1.1;
+        const JUMP_LOCATION = 30;
+        const PEAK_LOCATION = 50;
+        const LAND_LOCATION = 70;
         window.onload = init;
         function init() {
             canvas = document.getElementById("animation-canvas");
@@ -41,8 +46,9 @@
             changeTime();
             animateGhost();
             changePositionX();
-            //drawPacman1(positionX, 42);
-            drawGhost(positionX, 41, "lavander", 1);
+            changePositionY();
+            //drawPacman1(positionX, positionY);
+            //drawRuler(10);
             requestId = requestAnimationFrame(animationLoop);
 
         }
@@ -67,16 +73,23 @@
         }
         function animateGhost() {
             if ((0 <= time) && (time < MAX_TIME / 2)) {
-                drawGhost(positionX, 41, "lavander", 1);
-            } else if ((MAX_TIME / 2 <= time) && (time < MAX_TIME)) {
-                drawGhost(positionX, 41, "lavander", 2);
+                drawGhost(positionX, positionY, "lavander", 1);
+            } else if ((MAX_TIME / 2 <= time) || (time < MAX_TIME)) {
+                drawGhost(positionX, positionY, "lavander", 2);
             }
-    }
-
+        }
+        function changePositionY(){
+            if ((JUMP_LOCATION <= positionX) && (positionX < PEAK_LOCATION)) {
+                positionY /= ACCELERATION;
+            } else if ((JUMP_LOCATION <positionX) && (positionX < LAND_LOCATION)){
+                positionY *= ACCELERATION
+        }
+}
     </script>
     <script src="../drawing/pacman.js"></script>
     <script src="../drawing/ghost.js"></script>
     <script src="../drawing/drawGroundBlock.js"></script>
+    <script src="../drawing/ruler.js"></script>
 </body>
 
 </html>
