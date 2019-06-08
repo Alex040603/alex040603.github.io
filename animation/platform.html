@@ -8,12 +8,13 @@
 
 <body>
     <header>
-        <h1>Jumping</h1>
+        <h1>Platform Jumping</h1>
     </header>
     <nav>
         <a class="boxedit" href="../index.html">Hompage</a>
         <a class="boxedit" href="walk.html">Walk</a>
         <a class="boxedit" href="slide.html">Slide</a>
+        <a class="boxedit" href="jump.html">Jump</a>
     </nav>
     <section>
         <canvas id="animation-canvas" width="1000" height="700"></canvas>
@@ -24,14 +25,14 @@
         var requestId;
         var time = 0;
         var positionX = 0;
-        var positionY = 41;
-        var isJumping = false;
+        var positionY = 111;
+        // var isJumping = false;
         const MAX_TIME = 30;
-        const UNIT = 10
-        const ACCELERATION = 1.1;
-        const JUMP_LOCATION = 30;
-        const PEAK_LOCATION = 50;
-        const LAND_LOCATION = 70;
+        const UNIT = 5
+        // const ACCELERATION = 1.1;
+        // const JUMP_LOCATION = 30;
+        // const PEAK_LOCATION = 50;
+        // const LAND_LOCATION = 70;
         window.onload = init;
         function init() {
             canvas = document.getElementById("animation-canvas");
@@ -44,12 +45,14 @@
         function animationLoop(timeStamp) {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             drawBackground();
-            changeTime();
-            animateGhost();
-            changePositionX();
-            changePositionY();
-            //drawPacman1(positionX, positionY);
-            //drawRuler(10);
+            // changeTime();
+            // animateGhost();
+            // changePositionX();
+            // changePositionY();
+            // drawPacman1(positionX, positionY);
+            drawGhost(positionX, positionY, "lavander", 1);
+            animatePacman();
+            drawRuler(10);
             requestId = requestAnimationFrame(animationLoop);
 
         }
@@ -68,19 +71,27 @@
             }
         }
         function drawBackground() {
-            ctx.fillStyle = "black";
+            ctx.fillStyle = "lightblue";
             ctx.fillRect(0 * UNIT, 0 * UNIT, canvas.width, canvas.height);
-            drawGroundBlocks(0, 55, 7);
+            drawGroundBlocks(0, 124, 13);
+            drawGroundBlocks(73, 80, 4)
         }
-        function animateGhost() {
-            if (isJumping=true){
-                
-            }else if ((0 <= time) && (time < MAX_TIME / 2)) {
-                drawGhost(positionX, positionY, "lavander", 1);
-            } else if ((MAX_TIME / 2 <= time) || (time < MAX_TIME)) {
-                drawGhost(positionX, positionY, "lavander", 2);
+        function animatePacman() {
+            if ((0 <= time) && (time < MAX_TIME / 2)) {
+                drawPacman1(positionX, positionY);
+            } else if ((MAX_TIME / 3 <= time) || (time < MAX_TIME)) {
+                drawPacman2(positionX, positionY);
             }
-        }
+    }
+        // function animateGhost() {
+        //     if (isJumping=true){
+                
+        //     }else if ((0 <= time) && (time < MAX_TIME / 2)) {
+        //         drawGhost(positionX, positionY, "lavander", 1);
+        //     } else if ((MAX_TIME / 2 <= time) || (time < MAX_TIME)) {
+        //         drawGhost(positionX, positionY, "lavander", 2);
+        //     }
+        // }
         function changePositionY() {
             if ((JUMP_LOCATION <= positionX) && (positionX < PEAK_LOCATION)) {
                 positionY /= ACCELERATION;

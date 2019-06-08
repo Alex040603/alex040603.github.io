@@ -8,11 +8,10 @@
 
 <body>
     <header>
-        <h1>Drawing</h1>
+        <h1>Pacman Maze</h1>
     </header>
     <nav>
         <a class="boxedit" href="../index.html">Hompage</a>
-        <a class="boxedit" href="pacmanMaze.html">Pacman Maze</a>
     </nav>
     <section>
         <canvas id="animation-canvas" width="1000" height="700"></canvas>
@@ -32,12 +31,10 @@
         function init() {
             canvas = document.getElementById("animation-canvas");
             ctx = canvas.getContext("2d");
-            //drawGroundBlocks(0, 0, 1);
-            drawPacmanDie(0,0,12);
             drawRuler(1);
         }
     </script>
-    <script src="../drawing/pacman.js"></script>
+    <script src="../drawing/pacmanMaze.js"></script>
 </body>
 
 </html>
