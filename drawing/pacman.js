@@ -134,6 +134,26 @@ function drawPacmanDie(x, y, frame) {
         ctx.translate(0*UNIT,0*UNIT);
         ctx.fillStyle = "rgb(251,255,0)";
         ctx.fillRect(6 * UNIT, 6 * UNIT, 1 * UNIT, 1 * UNIT);
+        ctx.fillRect(10 * UNIT, 6 * UNIT, 1 * UNIT, 1 * UNIT);
+        ctx.fillRect(7 * UNIT, 7 * UNIT, 1 * UNIT, 1 * UNIT);
+        ctx.fillRect(9 * UNIT, 7 * UNIT, 1 * UNIT, 1 * UNIT);
+        ctx.fillRect(4 * UNIT, 7 * UNIT, 1 * UNIT, 1 * UNIT);
+        ctx.fillRect(5 * UNIT, 8 * UNIT, 1 * UNIT, 1 * UNIT);
+        ctx.fillRect(6 * UNIT, 6 * UNIT, 1 * UNIT, 1 * UNIT);
+        ctx.fillRect(12 * UNIT, 8 * UNIT, 1 * UNIT, 1 * UNIT);
+        ctx.fillRect(11 * UNIT, 9 * UNIT, 1 * UNIT, 1 * UNIT);
+        ctx.fillRect(3 * UNIT, 10 * UNIT, 2 * UNIT, 1 * UNIT);
+        ctx.fillRect(3 * UNIT, 10 * UNIT, 2 * UNIT, 1 * UNIT);
+        ctx.fillRect(12 * UNIT, 11 * UNIT, 2 * UNIT, 1 * UNIT);
+        ctx.fillRect(5 * UNIT, 12 * UNIT, 1 * UNIT, 1 * UNIT);
+        ctx.fillRect(4 * UNIT, 13 * UNIT, 1 * UNIT, 1 * UNIT);
+        ctx.fillRect(5 * UNIT, 12 * UNIT, 1 * UNIT, 1 * UNIT);
+        ctx.fillRect(7 * UNIT, 14 * UNIT, 1 * UNIT, 1 * UNIT);
+        ctx.fillRect(6 * UNIT, 15 * UNIT, 1 * UNIT, 1 * UNIT);
+        ctx.fillRect(9 * UNIT, 14 * UNIT, 1 * UNIT, 1 * UNIT);
+        ctx.fillRect(10 * UNIT, 15 * UNIT, 1 * UNIT, 1 * UNIT);
+        ctx.fillRect(11 * UNIT, 13 * UNIT, 1 * UNIT, 1 * UNIT);
+        ctx.fillRect(12 * UNIT, 14 * UNIT, 1 * UNIT, 1 * UNIT);
     }
     ctx.restore();
 }

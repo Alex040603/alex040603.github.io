@@ -115,9 +115,4 @@ function drawGroundBlock(){
     ctx.fillRect(6 * UNIT, 15 * UNIT, 2 * UNIT, 1 * UNIT);
     ctx.fillRect(7 * UNIT, 14 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillRect(15 * UNIT, 14 * UNIT,1  * UNIT, 1 * UNIT);
-    
-    //Partially the blacked out spots (Black spot sizs dont matter) are the ones you have to 
-    //complete with the same color above. Start wherever.
-    //April 4th - Done for now ignore blacked out pixels and change based on disgresion
-
 }

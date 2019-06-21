@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Pacman Dying</h1>
+    </header>
+    <nav>
+        <a class="boxedit" href="../index.html">Hompage</a>
+        <a class="boxedit" href="walk.html">Walk</a>
+        <a class="boxedit" href="slide.html">Slide</a>
+        <a class="boxedit" href="jump.html">Jump</a>
+        <a class="boxedit" href="platform.html">Platform</a>
+    </nav>
+    <section>
+        <canvas id="animation-canvas" width="1000" height="700"></canvas>
+    </section>
+    <script>
+        var canvas;
+        var ctx;
+        var requestId;
+        var time = 0;
+        var positionX = 4.5;
+        var positionY = 1.5;
+        const UNIT = 40
+        const MAX_TIME = 60;
+        window.onload = init;
+        function init() {
+            canvas = document.getElementById("animation-canvas");
+            ctx = canvas.getContext("2d");
+            startAnimation();
+        }
+        function startAnimation() {
+            requestId = requestAnimationFrame(animationLoop);
+        }
+        function animationLoop(timeStamp) {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            drawBlack()
+            drawPacmanDie(positionX, positionY, 1);
+            //drawRuler(10);
+            requestId = requestAnimationFrame(animationLoop);
+        }
+        function changeTime() {
+            if (time == MAX_TIME) {
+                time = 0
+            } else {
+                time += 1
+            }
+        }
+        function drawPacmanDie() {
+            if ((0 <= time) && (time < MAX_TIME / 12)) { //0-5
+                drawPacmanDie(positionX, positionY, 1);
+            } else if ((MAX_TIME / 12 <= time) && (time < MAX_TIME / 6)) { //5-10
+                drawPacmanDie(positionX, positionY, 2);
+            } else if ((MAX_TIME / 6 <= time) && (time < MAX_TIME / 4)) { //10-15
+                drawPacmanDie(positionX, positionY, 3);
+            } else if ((MAX_TIME / 4 <= time) && (time < MAX_TIME / 3)) { //15-20
+                drawPacmanDie(positionX, positionY, 4);
+            } else if ((MAX_TIME / 3 <= time) && (time < MAX_TIME / 3 + 5)) { //20-25
+                drawPacmanDie(positionX, positionY, 5);
+            } else if ((MAX_TIME / 3 + 5 <= time) && (time < MAX_TIME / 2)) { //25-30
+                drawPacmanDie(positionX, positionY, 6);
+            } else if ((MAX_TIME / 2 <= time) && (time < MAX_TIME / 2 + 5)) { //30-35
+                drawPacmanDie(positionX, positionY, 7);
+            } else if ((MAX_TIME / 2 + 5 <= time) && (time < MAX_TIME / 2 + 10)) { //35-40
+                drawPacmanDie(positionX, positionY, 8);
+            } else if ((MAX_TIME / 2 + 10 <= time) && (time < MAX_TIME - 15)) {  //40-45
+                drawPacmanDie(positionX, positionY, 9);
+            } else if ((MAX_TIME / - 15 <= time) && (time < MAX_TIME - 10)) { //45-50
+                drawPacmanDie(positionX, positionY, 10);
+            } else if ((MAX_TIME / -10 <= time) && (time < MAX_TIME -5 )) { //50-55
+                drawPacmanDie(positionX, positionY, 11);
+            } else if ((MAX_TIME -5 <= time) && (time < MAX_TIME)) { //55-60
+                drawPacmanDie(positionX, positionY, 12);
+            } //make the things into fractions
+        }
+        function drawBlack() {
+            ctx.fillStyle = "black";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+        }
+    </script>
+    <script src="../drawing/pacman.js"></script>
+    <script src="../drawing/ghost.js"></script>
+    <script src="../drawing/drawGroundBlock.js"></script>
+    <script src="../drawing/ruler.js"></script>
+</body>
+
+</html>
