@@ -1,6 +1,4 @@
 function drawPacmanDie(x, y, frame) {
-    //on the png, the death frames with 2 black dots on it are the ones that are done
-    //one dot means they are in progress
     ctx.save();
     ctx.translate(x*UNIT,y*UNIT);
     if (frame == 1) {

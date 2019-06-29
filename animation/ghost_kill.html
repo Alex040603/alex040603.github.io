@@ -8,7 +8,7 @@
 
 <body>
     <header>
-        <h1>Ghost killing Pacman</h1>
+        <h1>Ghost & Pacman</h1>
     </header>
     <nav>
         <a class="boxedit" href="../index.html">Hompage</a>
@@ -26,7 +26,7 @@
         var ctx;
         var requestId;
         var time = 0;
-        var ghostPositionX = 30;
+        var ghostPositionX = 60;
         var pacmanPositionX = 30;
         var positionY = 30;
         const UNIT = 10
@@ -43,11 +43,12 @@
         function animationLoop(timeStamp) {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             drawBlack()
-            //drawPacmanDie(positionX, positionY, 12);
-            changePositionX();
+
+            //drawPacmanDie(pacmanPositionX, positionY, 1);
+            // changePositionX();
             animateGhost();
             animatePacman();
-            //makePacmanDie();
+            makePacmanDie();
             changeTime();
             //drawRuler(10);
             requestId = requestAnimationFrame(animationLoop);
@@ -69,13 +70,13 @@
                 ghostPositionX = -13
             } else {
                 ghostPositionX += 1
-            }  
+            }
         }
         function animateGhost() {
             if ((0 <= time) && (time < MAX_TIME / 2)) {
-                drawGhost(ghostPositionX, 41, "lavander", 1), left;
+                drawGhost(ghostPositionX, 41, "lavander", 1, "right");
             } else if ((MAX_TIME / 2 <= time) || (time < MAX_TIME)) {
-                drawGhost(ghostPositionX, 41, "lavander", 2, left);
+                drawGhost(ghostPositionX, 41, "lavander", 2, "right");
             }
         }
         function animatePacman() {
@@ -83,6 +84,8 @@
                 drawPacman1(pacmanPositionX, 42);
             } else if ((MAX_TIME / 3 <= time) || (time < MAX_TIME)) {
                 drawPacman2(pacmanPositionX, 42);
+            } else if ((MAX_TIME / 4 <= time) || (time < MAX_TIME)) {
+                drawPacman3(pacmanPositionX, 42);
             }
         }
         function makePacmanDie() {

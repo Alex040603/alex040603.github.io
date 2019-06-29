@@ -1,14 +1,4 @@
 function drawGhost(x, y, color, frame, pupilFrame) {
-    var pupilFrame
-    if (pupilFrame == "up") {
-        drawPupilsUp();
-    } else if (pupilFrame == "right") {
-        drawPupilsRight();
-    } else if (pupilFrame == "down") {
-        drawPupilsDown();
-    } else if (pupilFrame == "left") {
-        drawPupilsLeft();
-    }
     var ghostColor;
     const RED_COLOR = "#FF0000";
     const LAVANDER_COLOR = "#FFB8FF";
@@ -43,15 +33,26 @@ function drawGhost(x, y, color, frame, pupilFrame) {
     ctx.fillStyle = ghostColor;
     ctx.fillRect(0 * UNIT, 6 * UNIT, 14 * UNIT, 6 * UNIT);
     ctx.fillStyle = "#FDFEFF"; //the white eyes
-    ctx.fillRect(4 * UNIT, 3 * UNIT, 2 * UNIT, 2 * UNIT);
-    ctx.fillRect(10 * UNIT, 3 * UNIT, 2 * UNIT, 1 * UNIT);
-    ctx.fillRect(3 * UNIT, 4 * UNIT, 4 * UNIT, 1 * UNIT);
-    ctx.fillRect(9 * UNIT, 4 * UNIT, 4 * UNIT, 1 * UNIT);
-    ctx.fillRect(9 * UNIT, 5 * UNIT, 4 * UNIT, 1 * UNIT);
-    ctx.fillRect(3 * UNIT, 5 * UNIT, 4 * UNIT, 2 * UNIT);
-    ctx.fillRect(4 * UNIT, 6 * UNIT, 2 * UNIT, 2 * UNIT);
-    ctx.fillRect(9 * UNIT, 6 * UNIT, 4 * UNIT, 1 * UNIT);
-    ctx.fillRect(10 * UNIT, 7 * UNIT, 2 * UNIT, 1 * UNIT);
+    ctx.fillRect(3 * UNIT, 3 * UNIT, 2 * UNIT, 2 * UNIT);
+    ctx.fillRect(9 * UNIT, 3 * UNIT, 2 * UNIT, 1 * UNIT);
+    ctx.fillRect(2 * UNIT, 4 * UNIT, 4 * UNIT, 1 * UNIT);
+    ctx.fillRect(8 * UNIT, 4 * UNIT, 4 * UNIT, 1 * UNIT);
+    ctx.fillRect(8 * UNIT, 5 * UNIT, 4 * UNIT, 1 * UNIT);
+    ctx.fillRect(2 * UNIT, 5 * UNIT, 4 * UNIT, 2 * UNIT);
+    ctx.fillRect(3 * UNIT, 6 * UNIT, 2 * UNIT, 2 * UNIT);
+    ctx.fillRect(8 * UNIT, 6 * UNIT, 4 * UNIT, 1 * UNIT);
+    ctx.fillRect(9 * UNIT, 7 * UNIT, 2 * UNIT, 1 * UNIT);
+
+    if (pupilFrame == "up") {
+        drawPupilsUp();
+    } else if (pupilFrame == "right") {
+        drawPupilsRight();
+    } else if (pupilFrame == "down") {
+        drawPupilsDown();
+    } else if (pupilFrame == "left") {
+        drawPupilsLeft();
+    }
+
     if (frame == 1) { // Tentacle Frame 1
         ctx.fillStyle = ghostColor;
         ctx.fillRect(0 * UNIT, 12 * UNIT, 1 * UNIT, 2 * UNIT);
@@ -77,21 +78,21 @@ function drawGhost(x, y, color, frame, pupilFrame) {
 
 function drawPupilsUp() {
     ctx.fillStyle = "#2373BD";
-    ctx.fillRect(5 * UNIT, 5 * UNIT, 2 * UNIT, 2 * UNIT);
-    ctx.fillRect(11 * UNIT, 5 * UNIT, 2 * UNIT, 2 * UNIT);
+    ctx.fillRect(3 * UNIT, 3 * UNIT, 2 * UNIT, 2 * UNIT);
+    ctx.fillRect(9 * UNIT, 3 * UNIT, 2 * UNIT, 2 * UNIT);
 }
 function drawPupilsRight() {
     ctx.fillStyle = "#2373BD";
-    ctx.fillRect(5 * UNIT, 5 * UNIT, 2 * UNIT, 2 * UNIT);
-    ctx.fillRect(11 * UNIT, 5 * UNIT, 2 * UNIT, 2 * UNIT);
+    ctx.fillRect(2 * UNIT, 5 * UNIT, 2 * UNIT, 2 * UNIT);
+    ctx.fillRect(8 * UNIT, 5 * UNIT, 2 * UNIT, 2 * UNIT);
 }
 function drawPupilsDown() {
     ctx.fillStyle = "#2373BD";
-    ctx.fillRect(5 * UNIT, 5 * UNIT, 2 * UNIT, 2 * UNIT);
-    ctx.fillRect(11 * UNIT, 5 * UNIT, 2 * UNIT, 2 * UNIT);
+    ctx.fillRect(3 * UNIT, 6 * UNIT, 2 * UNIT, 2 * UNIT);
+    ctx.fillRect(9 * UNIT, 6 * UNIT, 2 * UNIT, 2 * UNIT);
 }
 function drawPupilsLeft() {
     ctx.fillStyle = "#2373BD";
-    ctx.fillRect(5 * UNIT, 5 * UNIT, 2 * UNIT, 2 * UNIT);
-    ctx.fillRect(11 * UNIT, 5 * UNIT, 2 * UNIT, 2 * UNIT);
+    ctx.fillRect(4 * UNIT, 5 * UNIT, 2 * UNIT, 2 * UNIT);
+    ctx.fillRect(10 * UNIT, 5 * UNIT, 2 * UNIT, 2 * UNIT);
 }
