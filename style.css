@@ -58,3 +58,7 @@ canvas {
 #animation-canvas {
     background-color: white;
 }
+.notesColor {
+    color: cornflowerblue;
+    font-family: monospace
+}
