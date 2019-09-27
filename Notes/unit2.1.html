@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <a class="boxedit" href="notes.html">Back to Notes</a>
+    <header>
+        <h1 id="homepagetitle">Strings</h1>
+    </header>
+    <ul>
+        <li>Double quotes in strings are produced by adding \" in a string</li>
+        <li>Single quote with \'</li>
+        <li>Backslash with \\</li>
+        <li>Tab with /t</li>
+    </ul>
+
+    <p class="notesColor">var myString=""</p>
+
+    <p class="notesColor">if myString.isEmpty {</p>
+    <p class="notesColor">&emsp;&emsp;&emsp;&emsp;print("The string is empty")</p>
+    <p class="notesColor">}</p>
+
+    <p>The .isEmpty is asking whether the string has any characters or not in which case it didn't so it printed "the string
+        is empty"
+    </p>
+
+    <h2>Concatenation</h2>
+    <p>Adding two strings from var or let statements</p>
+    <p class="notesColor">let string1 = "Hello"</p>
+    <p class="notesColor">let string2 = "Tim"</p>
+    <p class="notesColor">let greeting = string1 + string2</p>
+    <p class="notesColor">print(greeting)</p>
+    <p>It should print "Hello, Tim"</p>
+    <br>
+    <h4>Eg 2:</h4>
+    <p class="notesColor">let string1 = "Hello"</p>
+    <p class="notesColor">let string2 = Tim</p>
+    <p class="notesColor">print("An example for a greeting would be \(string1 + string2)</p>
+    <p>Also works with intigers and doubles.</p>
+    <br>
+    <h2>.lowercased</h2>
+    <p>Putting this after a string will lowercase the entire phrase or word, making it easy for comparing.
+    </p>
+    <br>
+    <h2>.hasSuffix and .hasPrefix</h2>
+    <p>When put behing a let or var value, one that is a string, will identify wheather it has a word before or after. An example
+        would be "Hello Tim". The prefix is "Hello", suffix "Tim"
+    </p>
+    <h4>Eg 3:</h4>
+    <p class="notesColor">Let greetingTim = "Hello, Tim"</p>
+    <p class="notesColor">if greetingTim.hasSuffix("Tim") {</p>
+    <p class="notesColor">&emsp;&emsp;&emsp;&emsp;print("The suffix is Tim")</p>
+    <p class="notesColor">}</p>
+    <p>It will print the text as the suffix is "Tim"</p>
+    <br>
+    <h2>.contains</h2>
+    <p>.contains is used to identify word(s) in a string. For example:
+    </p>
+    <p class="notesColor">let greeting = "Hello everyone"</p>
+    <p class="notesColor">if greeting.contains("Hello") {</p>
+    <p class="notesColor">&emsp;&emsp;&emsp;&emsp;print("We found a greeting")</p>
+    <p class="notesColor">}</p>
+    <p>It will print it becuase "Hello everyone" contains Hello</p>
+    <br>
+    <h2>.count</h2>
+    <p>.count is used to count the number of characters. It is usually used to comapre if two things are the same. It can also
+        be used to count characters
+    <p class="notesColor">let name = Mike</p>   
+    <p class="notesColor">let count = name.count </p>  
+    <p class="notesColor">if count = 4 {</p>  
+    <p class="notesColor">&emsp;&emsp;&emsp;&emsp;print("The name has 4 letters")</p>  
+    <p class="notesColor">}</p>  
+</body>
+
+</html>

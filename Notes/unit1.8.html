@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <h2>Story Boards</h2>
+    <P>The screen that lets you customize the visual aspect of your app. You can add buttons, lebels,
+        a title, and more. Opened by clicking main.storyboard</P>
+    
+    <h2>Outlets and Actions</h2>
+    <p>When you have an object that you want the user to interact with, buttons and interactive 
+        elements, you can drag the object to the view controller. When you place the object in the code, you can 
+        make an outlet or action. An outlet connects the object to the code, it is usually when an object will change
+        in any way, color, size, etc. 
+        The connected prodect should look like: <p class = notesColor>@IBOutlet weak var labelName: UILabel!</p> 
+        <br>
+        An action is used to run commands when using an object. For example, changing the text on the app when pressing a button is an action.
+        The action should look like: <p class = notesColor >@IBAction func changeTitle(_ sender: UIButton) {</p>
+                                    <p class = notesColor >&emsp;&emsp;&emsp;&emsp;mainLabel.text = "this app rocks"</p>
+                                     <p class = notesColor >}</p>
+        In this example, the label is changed to "This app rocks" when the button is pressed.
+        
+    </p>    
+
+</body>
+
+</html>
