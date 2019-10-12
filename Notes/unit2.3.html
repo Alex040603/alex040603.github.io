@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <a class="boxedit" href="notes.html">Back to Notes</a>
+    <header>
+        <h1 id="homepagetitle">Structure</h1>
+
+        <body>
+            <h3>Structures</h3>
+            <p class="notesColor">struct I-Phone {</p>
+            <p class="notesColor">&emsp;&emsp;&emsp;&emsp;const year : int</p>
+            <p class="notesColor">&emsp;&emsp;&emsp;&emsp;const version : string</p>
+            <p class="notesColor">&emsp;&emsp;&emsp;&emsp;const dimesions : double</p>
+            <p class="notesColor">}</p>
+            <p class="notesColor">func explain I-Phone {</p>
+            <p class="notesColor">print("This I-Phone was made in \(year), its version is the \(version) and its dimesions are \(dimesions)"</p>
+            <p class="notesColor">}</p>
+            <p>The example above is for Structures. "struct" is a blueprint for a cirtain thing like a car, shirt, or I-Phone.
+                In this case, the I-Phone is recieving its properties such as dimesions, version, and year which each make
+                up the I-Phone. The function is using the "blueprints" of the phone for
+            </p>
+            <h3>Initializers</h3>
+            <p>Used to return a new instance of a type. For strings it's String.init(), intigers is Int.init(), and for bools
+                it's Bool.init();. The default value, in that order, is "", 0, and false. You can also ommit the "init" and
+                just have, for example, String().
+            </p>
+            <br>
+            <h3>Memberwise Initializers</h3>
+            <p>Used for adding a default value. It also gives a specific value. Such as: let age = Age (count:15)</p>
+            <br>
+            <h3>Custom Initializers</h3>
+            <p>Used to give something a custom value that it calculate/influenced by another. It's
+               used within structs. Pretend the following example is within a struct with 2 values: cm and m :
+            <p class="notesColor">init(cm : Double) {</p>
+            <p class="notesColor">self.cm = cm</p>
+            <p class="notesColor">m =cm * 100</p>
+            <p class="notesColor">}</p>
+            ^ The value cm is influenced by m. As m increases, so does cm.
+            </p>
+        </body>
+
+        <p class="notesColor"></p>
+
+</html>

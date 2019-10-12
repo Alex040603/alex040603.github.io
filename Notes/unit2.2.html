@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <a class="boxedit" href="notes.html">Back to Notes</a>
+    <header>
+        <h1 id="homepagetitle">Functions</h1>
+
+        <body>
+            <h3>Parameters</h3>
+            <p>Used to provide a function with extra information and to give those values an appropraite result
+            </p>
+            <h4>Example:</h4>
+            <p class="notesColor">func myAge(value:Int) {</p>
+            <p class="notesColor">&emsp;&emsp;&emsp;&emsp;let currentAge = 15</p>
+            <p class="notesColor">&emsp;&emsp;&emsp;&emsp;print (\(currentAge) is my current age")</p>
+            <p class="notesColor">}</p>
+            <p class="notesColor">print(myAge * 3)</p>
+            <br>
+            <h3>External Argument Labels</h3>
+            <p>Used to use the function value both in and out of the function</p>
+            <h4>Example 1:</h4>
+            <p class="notesColor">func home(country : String, city : String) {</p>
+            <p class="notesColor">&emsp;&emsp;&emsp;&emsp;print ("I live in (\country), (\city)")</p>
+            <p class="notesColor">}</p>
+            <p class="notesColor">home(country : "Canada", city = "Vancouver")</p>
+            <h3>Example 2</h3>
+            <p class="notesColor">func home(country : String, in city : String) {</p>
+            <p class="notesColor">&emsp;&emsp;&emsp;&emsp;print ("I live in (\country), (\city)")</p>
+            <p class="notesColor">}</p>
+            <p class="notesColor">home(country : "Canada", in : "Vancouver")</p>
+            <h3>Example 3</h3>
+            <p class="notesColor">func home(_country : String, in city : String) {</p>
+            <p class="notesColor">&emsp;&emsp;&emsp;&emsp;print ("I live in (\country), (\city)")</p>
+            <p class="notesColor">}</p>
+            <p class="notesColor">home("Canada", in : "Vancouver")</p>
+            <br>
+            <h3>Return Values</h3>
+            <p>Used when the value of the function replaces to function call as a whole
+            </p>
+            <h4>Example:</h4>
+            <p class="notesColor">func divide(intOne:Int, intTwo:Int) -> Int {</p>
+            <p class="notesColor">&emsp;&emsp;&emsp;&emsp;return intOne / intTwo</p>
+            <p class="notesColor">}</p>
+            <p class="notesColor">let answer = multiply(intOne: 6, intTwo: 3)</p>
+            <p class="notesColor">print ("Six divided by 3 is \(answer)"))</p>
+            <h3>Default Parameter Values</h3>
+            <p>Used to declare a default value for a perameter within a function, being able to be called with or without the
+                value. For example, when having a function for calculating someones age, you may set the default value to
+                an integer.
+
+            </p>
+        </body>
+
+</html>
