@@ -13,35 +13,51 @@
         <body>
             <h3>Structures</h3>
             <p class="notesColor">struct I-Phone {</p>
-            <p class="notesColor">&emsp;&emsp;&emsp;&emsp;const year : int</p>
-            <p class="notesColor">&emsp;&emsp;&emsp;&emsp;const version : string</p>
-            <p class="notesColor">&emsp;&emsp;&emsp;&emsp;const dimesions : double</p>
-            <p class="notesColor">}</p>
-            <p class="notesColor">func explain I-Phone {</p>
-            <p class="notesColor">print("This I-Phone was made in \(year), its version is the \(version) and its dimesions are \(dimesions)"</p>
+            <p class="notesColor">&emsp;&emsp;&emsp;&emsp;let year : int</p>
+            <p class="notesColor">&emsp;&emsp;&emsp;&emsp;let version : string</p>
+            <p class="notesColor">&emsp;&emsp;&emsp;&emsp;let dimesions : double</p>
+            <p class="notesColor">&emsp;&emsp;&emsp;&emsp;func explain {</p>
+            <p class="notesColor">&emsp;&emsp;&emsp;&emsp;print("This I-Phone was made in \(year), its version is the \(version) and its dimesions
+                are \(dimesions)"</p>
+            <p class="notesColor">&emsp;&emsp;&emsp;&emsp;}</p>
             <p class="notesColor">}</p>
             <p>The example above is for Structures. "struct" is a blueprint for a cirtain thing like a car, shirt, or I-Phone.
-                In this case, the I-Phone is recieving its properties such as dimesions, version, and year which each make
-                up the I-Phone. The function is using the "blueprints" of the phone for
             </p>
             <h3>Initializers</h3>
-            <p>Used to return a new instance of a type. For strings it's String.init(), intigers is Int.init(), and for bools
-                it's Bool.init();. The default value, in that order, is "", 0, and false. You can also ommit the "init" and
-                just have, for example, String().
-            </p>
+            <p>The general idea of giving default values in a struct. Memberwise and Custom Initializers are specific types.</p>
+            <p class="notesColor">struct Pencil {</p>
+            <p class="notesColor">&emsp;&emsp;&emsp;&emsp;let color : String : "Blue"</p>
+            <p class="notesColor">}</p>
+            <p class="notesColor">let myPencil = Pencil()</p>
+            <p class="notesColor">print(myPencil.color)</p>
             <br>
             <h3>Memberwise Initializers</h3>
-            <p>Used for adding a default value. It also gives a specific value. Such as: let age = Age (count:15)</p>
+            <p>For giving values for each field in an scruct</p>
+            <p class="notesColor">struct Shirt {</p>
+            <p class="notesColor">&emsp;&emsp;&emsp;&emsp;let size : String</p>
+            <p class="notesColor">}</p>
+            <p class="notesColor">let myShirt = Shirt(size : "Medium")</p>
+            <p class="notesColor">print(myShirt.size)</p>
             <br>
             <h3>Custom Initializers</h3>
-            <p>Used to give something a custom value that it calculate/influenced by another. It's
-               used within structs. Pretend the following example is within a struct with 2 values: cm and m :
-            <p class="notesColor">init(cm : Double) {</p>
-            <p class="notesColor">self.cm = cm</p>
-            <p class="notesColor">m =cm * 100</p>
-            <p class="notesColor">}</p>
-            ^ The value cm is influenced by m. As m increases, so does cm.
+            <p>Used to give something a custom value that it calculate/influenced by another
+                <p class="notesColor">struct FriendsHeight {</p>
+                <p class="notesColor">&emsp;&emsp;&emsp;&emsp;let heightCm : Int</p>
+                <p class="notesColor">&emsp;&emsp;&emsp;&emsp;init(cm : Double) {</p>
+                <p class="notesColor">&emsp;&emsp;&emsp;&emsp;self.cm = cm</p>
+                <p class="notesColor">&emsp;&emsp;&emsp;&emsp;m =cm * 100</p>
+                <p class="notesColor">}</p>
+                ^ The value cm is influenced by m. As m increases, so does cm.
+                <p>It is different to Memberwise Initializers because the values arent set. They can change and be influenced.
+                </p>
             </p>
+            <h3>Mutating Functions</h3>
+            <p>A function where value(s) change within a struct</p>
+            <p class="notesColor">struct Bpm {</p>
+            <p class="notesColor">&emsp;&emsp;&emsp;&emsp;var beats: Int</p>
+            <p class="notesColor">&emsp;&emsp;&emsp;&emsp;mutating func takeStep() {</p>
+            <p class="notesColor">&emsp;&emsp;&emsp;&emsp;steps += 1</p>
+            <p class="notesColor">}</p>
         </body>
 
         <p class="notesColor"></p>

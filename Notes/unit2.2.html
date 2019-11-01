@@ -23,18 +23,18 @@
             <br>
             <h3>External Argument Labels</h3>
             <p>Used to use the function value both in and out of the function</p>
-            <h4>Example 1:</h4>
+            <h3>1 Arguement Label:</h3>
             <p class="notesColor">func home(country : String, city : String) {</p>
             <p class="notesColor">&emsp;&emsp;&emsp;&emsp;print ("I live in (\country), (\city)")</p>
             <p class="notesColor">}</p>
             <p class="notesColor">home(country : "Canada", city = "Vancouver")</p>
-            <h3>Example 2</h3>
+            <h3>2 Arguement Labels</h3>
             <p class="notesColor">func home(country : String, in city : String) {</p>
             <p class="notesColor">&emsp;&emsp;&emsp;&emsp;print ("I live in (\country), (\city)")</p>
             <p class="notesColor">}</p>
             <p class="notesColor">home(country : "Canada", in : "Vancouver")</p>
-            <h3>Example 3</h3>
-            <p class="notesColor">func home(_country : String, in city : String) {</p>
+            <h3>Ommiting A Label</h3>
+            <p class="notesColor">func home(_ country : String, in city : String) {</p>
             <p class="notesColor">&emsp;&emsp;&emsp;&emsp;print ("I live in (\country), (\city)")</p>
             <p class="notesColor">}</p>
             <p class="notesColor">home("Canada", in : "Vancouver")</p>
@@ -52,8 +52,18 @@
             <p>Used to declare a default value for a perameter within a function, being able to be called with or without the
                 value. For example, when having a function for calculating someones age, you may set the default value to
                 an integer.
-
             </p>
+            <br>
+            <h3>Instance Methods</h3>
+            <p>Used to store information into a let / var statement to be used elsewhere. The information is from
+               the parameters from a struct. Pretend the following example is taking information from
+               a struct for a someone's favorite foods with two vars -or parameters- :
+               <p class="notesColor">var food1 : string</p> 
+               <p class="notesColor">var food2 : string</p>  
+            </p>
+            <p>The following is the example for Instance Methods</p>
+            <p class="notesColor">let dave = someone(food1 = "carrot", food2 = "pizza")</p>
+            <p>The information from the instance method is being stored in Dave.</p>
         </body>
 
 </html>

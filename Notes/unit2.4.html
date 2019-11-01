@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <a class="boxedit" href="notes.html">Back to Notes</a>
+    <header>
+        <h1 id="homepagetitle">Class</h1>
+
+        <body>
+            <h4>Inheritence</h4>
+            <p>This feature allows you to use the fields of the base class in the sub and superclass</p>
+            <p>Eg:</p>
+            <p>Base class: Sport</p>
+            <p>Sub class: BallSport</p>
+            <p>Super class: Tennis</p>
+            <p>Sport may have fields tending to all types of sports. The sub class may use some 
+               of those fields such as one that involves a sport with a ball. The super class may use new fields
+               that are made in the sub class.
+            </p>
+            <br>
+            <h2>Defining classes</b2>
+            <h4>Base class:</h4>
+            <p>Base classes are made like structures but the "struct" is replaced by "class"</p>
+            <h4>Sub class:</h4>
+            <p>Eg:</p>
+            <p class="notesColor">class BallSport: Sport {</p>
+            <p class="notesColor">&emsp;&emsp;&emsp;&emsp;*code*</p>
+            <p class="notesColor">}</p>
+            <br>
+            <h2>Overriding methods and properties</h2>
+            <p>Used to override a field in the base class. For example if the base class has left a field
+                blank, the sub class may override that function to add one of its own.
+            </p>
+            <p>Used like the following:</p>
+            <p class="notesColor">class Tennis: Sport {</p>
+            <p class="notesColor">&emsp;&emsp;&emsp;&emsp;override func onGrass() {</p>
+            <p class="notesColor">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;print("It's not played on grass")</p>
+            <p class="notesColor">&emsp;&emsp;&emsp;&emsp;}</p>
+            <p class="notesColor">}</p>
+            <p>Just imagine the class Sport had the field "onGrass" that was not used becuase a random
+                sport could or could not be played on grass. The override was used here becuase tennis isnt
+                played on grass, a property not specified by the Sports base class.
+            </p>
+        </body>
+
+        <p class="notesColor"></p>
+
+</html>
